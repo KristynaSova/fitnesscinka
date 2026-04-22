@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitnessčinka | Speciální činky na fitness a bodybuilding</title>
+    <meta name="description"
+        content="Unikátní tvarové řešení pro procvičení více než 6 svalových partií. Fitness činky 21-32 kg pro bodybuilding a domácí trénink.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fitnessčinka - Unikátní fitness činky">
+    <meta property="og:description"
+        content="Speciální činky na fitness a bodybuilding. Unikátní tvarové řešení pro domácí trénink.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitnesscinka.cz/"> <!-- Placeholder pro ostrý web -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Obrazky/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Obrazky/icons/favicon-16x16.png">
+
+    <!-- Bezpečnostní hlavičky (simulace) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigace -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#home" class="logo">
+                <img src="Obrazky/svg/logo.svg" alt="Fitnessčinka Logo" width="150" height="auto">
+            </a>
+
+            <!-- Hamburger ikona -->
+            <button class="mobile-menu-toggle" aria-label="Otevřít menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigační menu -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link">Domů</a></li>
+                    <li><a href="#fitnesscinka" class="nav__link">Fitnessčinka</a></li>
+                    <li><a href="#galerie" class="nav__link">Galerie</a></li>
+                    <li><a href="#varianty" class="nav__link">Varianty</a></li>
+                    <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+                    <li><a href="koupit.html" class="nav__link btn btn--nav">Koupit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home / Hero Sekce -->
+        <section id="home" class="hero">
+            <div class="hero__bg-image" style="background-image: url('Obrazky/slider/slider_01_2200.webp');"></div>
+            <div class="hero__overlay"></div>
+
+            <div class="container">
+                <div class="hero__content">
+                    <span class="hero__label">Novinka</span>
+                    <h1 class="hero__title">
+                        Fitness činky <br>
+                        <span class="text-gradient">21–32 kg</span>
+                    </h1>
+                    <p class="hero__subtitle">Fitness – bodybuilding – hobby</p>
+                    <p class="hero__desc">Unikátní tvarové řešení pro procvičení více než 6 svalových partií.</p>
+
+                    <a href="#fitnesscinka" class="btn btn--primary hero__btn">Zjistit více info</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce O produktu -->
+        <section id="fitnesscinka" class="section bg-secondary">
+            <div class="container split-section">
+                <!-- Textový sloupec -->
+                <div class="split-section__content">
+                    <span class="section-label">O co jde?</span>
+                    <h2 class="section-title">Speciální činky na fitness a bodybuilding</h2>
+                    <p class="section-desc">
+                        Speciální činky na fitness a bodybuilding. Určeno zejména pro prohřátí svalového hmoty- resp.
+                        procvičení před klasickým tréningem.
+                    </p>
+                    <p class="section-desc">
+                        Nebo je možné pracovat celou dobu s lehkou variantou- formou fitness pro vyrýsování svalů a
+                        snížení nadváhy. Těžší varianty jsou určeny především pro bodybuilding a tedy nabrání svalové
+                        hmoty.
+                    </p>
+                    <a href="#varianty" class="btn btn--primary section-btn">Vybrat variantu</a>
+                </div>
+                <!-- Obrázkový sloupec -->
+                <div class="split-section__image">
+                    <img src="Obrazky/content/about_1100.webp" alt="Fitness činka detail"
+                        class="rounded-image shadow-lg" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Benefity -->
+        <section class="section">
+            <div class="container">
+                <div class="benefits-grid">
+                    <!-- Box 1 -->
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-dumbbell benefit-icon"></i>
+                        <h3 class="benefit-title">Vhodné jak pro fitness, tak i bodybuilding</h3>
+                    </div>
+                    <!-- Box 2 (Highlighted) -->
+                    <div class="benefit-card benefit-card--highlight">
+                        <i class="fa-solid fa-shield-halved benefit-icon"></i>
+                        <h3 class="benefit-title">Vyráběno ze základních provedení</h3>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-box-open benefit-icon"></i>
+                        <h3 class="benefit-title">Stojan ZDARMA při nákupu všech provedení</h3>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-award benefit-icon"></i>
+                        <h3 class="benefit-title">Unikátní patentovaný design</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Svaly / Use Case -->
+        <section id="galerie" class="section text-center">
+            <div class="container section-svaly__header">
+                <span class="section-label">Které svaly lze posílit?</span>
+                <h2 class="section-title">
+                    Procvičíte více než <br> <span class="text-gradient">6 svalových partií</span>
+                </h2>
+                <div class="section-desc-center">
+                    <p class="section-desc">
+                        Procvičíte více než 6 svalových partií – od břišních, trapézových, prsních, biceps, deltových
+                        svalových, až po zádové svaly.
+                    </p>
+                    <p class="section-desc">
+                        Vždy záleží na intenzitě tréninku. Optimální je vytvořit si vlastní tréninkový plán, který bude
+                        pracovat pravidelně každou týdenní část podle zatížení svalové partie. Univerzálnost je
+                        vlastností i pro domácí používání není nutné skladovat několik činek a posilovacích zařízení.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <button class="slider-btn slider-btn--prev" aria-label="Předchozí foto"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <div class="gallery-track" id="gallery-slider">
+                    <a href="Obrazky/content/gallery/01_fitness_cinky_b.jpg" class="gallery-item" target="_blank"
+                        title="Zvětšit fotku">
+                        <img src="Obrazky/content/gallery/01_fitness_cinky.webp" alt="Fitness činka cvik 1"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/02_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/02_fitness_cinky.webp" alt="Fitness činka cvik 2"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/03_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/03_fitness_cinky.webp" alt="Fitness činka cvik 3"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/04_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/04_fitness_cinky.webp" alt="Fitness činka cvik 4"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/05_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/05_fitness_cinky.webp" alt="Fitness činka cvik 5"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/06_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/06_fitness_cinky.webp" alt="Fitness činka cvik 6"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/07_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/07_fitness_cinky.webp" alt="Fitness činka cvik 7"
+                            loading="lazy">
+                    </a>
+                    <a href="Obrazky/content/gallery/08_fitness_cinky_b.jpg" class="gallery-item" target="_blank">
+                        <img src="Obrazky/content/gallery/08_fitness_cinky.webp" alt="Fitness činka cvik 8"
+                            loading="lazy">
+                    </a>
+                </div>
+                <button class="slider-btn slider-btn--next" aria-label="Další foto"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Sekce Produkty / Varianty -->
+        <section id="varianty" class="section bg-secondary">
+            <div class="container text-center">
+                <span class="section-label">Vyber si svou váhu</span>
+                <h2 class="section-title">4 varianty <span class="text-gradient">produktu</span></h2>
+
+                <div class="products-grid">
+                    <!-- Produkt 1 -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <picture>
+                                <source srcset="Obrazky/content/products/product_04.webp" type="image/webp">
+                                <img src="Obrazky/content/products/product_04.jpg" alt="Fitness činka 13 kg"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Fitness činka 13 kg</h3>
+                            <div class="product-card__colors">
+                                <button class="color-dot color-yellow color-dot--active" title="žlutá" data-varianta="13kg-zluta" aria-label="Vybrat žlutou"></button>
+                                <button class="color-dot color-pink" title="růžová" data-varianta="13kg-ruzova" aria-label="Vybrat růžovou"></button>
+                            </div>
+                            <p class="product-card__desc">Posílení svalových partií: prsa, trapéz, deltový sval, biceps,
+                                triceps, zádové, břišní. Vytvořena také pro bench press.</p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">3 990 Kč</span>
+                                <a href="koupit.html?varianta=13kg-zluta" class="btn btn--primary order-link">Koupit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produkt 2 -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <picture>
+                                <source srcset="Obrazky/content/products/product_01-2.webp" type="image/webp">
+                                <img src="Obrazky/content/products/product_01-2.jpg" alt="Fitness činka 21 kg"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Fitness činka 21 kg</h3>
+                            <div class="product-card__colors">
+                                <button class="color-dot color-grey color-dot--active" title="stříbrná" data-varianta="21kg-stribrna" aria-label="Vybrat stříbrnou"></button>
+                                <button class="color-dot color-black" title="černá" data-varianta="21kg-cerna" aria-label="Vybrat černou"></button>
+                            </div>
+                            <p class="product-card__desc">Posílení svalových partií: prsa, trapéz, deltový sval, biceps,
+                                triceps, zádové, břišní. Vytvořena také pro bench press.</p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">5 990 Kč</span>
+                                <a href="koupit.html?varianta=21kg-stribrna" class="btn btn--primary order-link">Koupit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produkt 3 -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <picture>
+                                <source srcset="Obrazky/content/products/product_02-2.webp" type="image/webp">
+                                <img src="Obrazky/content/products/product_02-2.jpg" alt="Fitness činka 27 kg"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Fitness činka 27 kg</h3>
+                            <div class="product-card__colors">
+                                <button class="color-dot color-grey color-dot--active" title="stříbrná" data-varianta="27kg-stribrna" aria-label="Vybrat stříbrnou"></button>
+                                <button class="color-dot color-black" title="černá" data-varianta="27kg-cerna" aria-label="Vybrat černou"></button>
+                            </div>
+                            <p class="product-card__desc">Posílení svalových partií: prsa, trapéz, deltový sval, biceps,
+                                triceps, zádové, břišní. Vytvořena také pro bench press.</p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">6 990 Kč</span>
+                                <a href="koupit.html?varianta=27kg-stribrna" class="btn btn--primary order-link">Koupit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produkt 4 -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <picture>
+                                <source srcset="Obrazky/content/products/product_03-2.webp" type="image/webp">
+                                <img src="Obrazky/content/products/product_03-2.jpg" alt="Fitness činka 32 kg"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Fitness činka 32 kg</h3>
+                            <div class="product-card__colors">
+                                <button class="color-dot color-grey color-dot--active" title="stříbrná" data-varianta="32kg-stribrna" aria-label="Vybrat stříbrnou"></button>
+                                <button class="color-dot color-black" title="černá" data-varianta="32kg-cerna" aria-label="Vybrat černou"></button>
+                            </div>
+                            <p class="product-card__desc">Posílení svalových partií: prsa, trapéz, deltový sval, biceps,
+                                triceps, zádové, břišní. Vytvořena také pro bench press.</p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">8 990 Kč</span>
+                                <a href="koupit.html?varianta=32kg-stribrna" class="btn btn--primary order-link">Koupit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Full Width Banner -->
+        <section class="banner">
+            <picture class="banner__picture">
+                <source
+                    type="image/webp"
+                    srcset="Obrazky/content/banners/banner_01_400.webp 400w,
+                            Obrazky/content/banners/banner_01_800.webp 800w,
+                            Obrazky/content/banners/banner_01_1200.webp 1200w,
+                            Obrazky/content/banners/banner_01_1800.webp 1800w,
+                            Obrazky/content/banners/banner_01_2200.webp 2200w"
+                    sizes="100vw">
+                <source
+                    type="image/jpeg"
+                    srcset="Obrazky/content/banners/banner_01_400.jpg 400w,
+                            Obrazky/content/banners/banner_01_800.jpg 800w,
+                            Obrazky/content/banners/banner_01_1200.jpg 1200w,
+                            Obrazky/content/banners/banner_01_1800.jpg 1800w,
+                            Obrazky/content/banners/banner_01_2200.jpg 2200w"
+                    sizes="100vw">
+                <img src="Obrazky/content/banners/banner_01_1200.jpg" alt="Carol CZ fitness činka 32 kg" loading="lazy">
+            </picture>
+        </section>
+    </main>
+
+    <!-- Footer / Patička -->
+    <footer class="footer" id="kontakt">
+        <div class="container footer__inner">
+            <!-- Sloupec 1: Logo + popis -->
+            <div class="footer__col footer__col--brand">
+                <a href="#home" class="footer__logo">
+                    <img src="Obrazky/svg/logo.svg" alt="Fitnessčinka Logo" width="150" height="auto">
+                </a>
+                <p class="footer__text">Speciální činky pro maximální výkon ve fitness i bodybuildingu.</p>
+            </div>
+
+            <!-- Sloupec 2: Kontakt -->
+            <div class="footer__col">
+                <h3 class="footer__title">Kontakt</h3>
+                <ul class="footer__contact-list">
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-phone"></i></span>
+                        <a href="tel:+420736640972">(+420) 736 640 972</a>
+                    </li>
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-envelope"></i></span>
+                        <a href="mailto:milan.grulich@carolcz.cz">milan.grulich@carolcz.cz</a>
+                    </li>
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <address class="footer__address">Záměl 59, 51743 Potštejn</address>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sloupec 3: Rychlé odkazy -->
+            <div class="footer__col">
+                <h3 class="footer__title">Rychlé odkazy</h3>
+                <ul class="footer__links">
+                    <li><a href="#home">Domů</a></li>
+                    <li><a href="#fitnesscinka">Fitnessčinka</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#varianty">Varianty</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© <span id="footerYear"></span> CAROLcz. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox (Skrytý překryv vrstva pro fotky) -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Zavřít"><i class="fa-solid fa-xmark"></i></button>
+        <img class="lightbox__img" id="lightbox-img" src="" alt="Detail fotky">
+    </div>
+
+    <!-- Back to Top -->
+    <button class="btt" id="bttBtn" aria-label="Zpět nahoru">
+        <svg class="btt__ring" viewBox="0 0 52 52" aria-hidden="true">
+            <defs>
+                <linearGradient id="bttGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%"   stop-color="#e63946"/>
+                    <stop offset="50%"  stop-color="#ff9f43"/>
+                    <stop offset="100%" stop-color="#a29bfe"/>
+                </linearGradient>
+            </defs>
+            <circle class="btt__track" cx="26" cy="26" r="23"/>
+            <circle class="btt__progress" id="bttProgress" cx="26" cy="26" r="23"/>
+        </svg>
+        <i class="fa-solid fa-chevron-up btt__icon"></i>
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

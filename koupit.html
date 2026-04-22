@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednávka | Fitnessčinka</title>
+    <meta name="description" content="Objednejte si fitness činku Carol CZ. Vyberte variantu a odešlete objednávku.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Obrazky/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Obrazky/icons/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero sekce s tlačítkem zpět -->
+    <section class="order-hero">
+        <picture class="order-hero__bg">
+            <source
+                type="image/webp"
+                srcset="Obrazky/slider/slider_03_400.webp 400w,
+                        Obrazky/slider/slider_03_800.webp 800w,
+                        Obrazky/slider/slider_03_1200.webp 1200w,
+                        Obrazky/slider/slider_03_1800.webp 1800w,
+                        Obrazky/slider/slider_03_2200.webp 2200w"
+                sizes="100vw">
+            <source
+                type="image/jpeg"
+                srcset="Obrazky/slider/slider_03_400.jpg 400w,
+                        Obrazky/slider/slider_03_800.jpg 800w,
+                        Obrazky/slider/slider_03_1200.jpg 1200w,
+                        Obrazky/slider/slider_03_1800.jpg 1800w,
+                        Obrazky/slider/slider_03_2200.jpg 2200w"
+                sizes="100vw">
+            <img src="Obrazky/slider/slider_03_1200.jpg" alt="Fitness činka Carol CZ">
+        </picture>
+        <div class="order-hero__overlay"></div>
+
+        <a href="index.html" class="order-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Zpět na hlavní stránku
+        </a>
+
+        <div class="container order-hero__content">
+            <span class="hero__label">Objednávka</span>
+            <h1 class="order-hero__title">
+                Objednejte si svou<br>
+                <span class="text-gradient">Fitnessčinku</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Formulář -->
+    <main class="section bg-secondary">
+        <div class="container order-container">
+
+            <div class="order-form-wrap">
+                <h2 class="order-form__heading">Vyplňte objednávkový formulář</h2>
+                <p class="order-form__subtext">Všechna pole označená <span class="required-star">*</span> jsou povinná.</p>
+
+                <form class="order-form" id="orderForm" novalidate>
+
+                    <!-- Řádek 1: Jméno | E-mail -->
+                    <div class="order-form__row">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Jméno a příjmení <span class="required-star">*</span></label>
+                            <input class="form-input" type="text" id="fullName" name="fullName"
+                                placeholder="Jan Novák" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">E-mail <span class="required-star">*</span></label>
+                            <input class="form-input" type="email" id="email" name="email"
+                                placeholder="jan@example.cz" required autocomplete="email">
+                        </div>
+                    </div>
+
+                    <!-- Řádek 2: Telefon | Varianta -->
+                    <div class="order-form__row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Telefon <span class="required-star">*</span></label>
+                            <input class="form-input" type="tel" id="phone" name="phone"
+                                placeholder="+420 736 640 972" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="varianta">Varianta produktu <span class="required-star">*</span></label>
+                            <select class="form-input form-select" id="varianta" name="varianta" required>
+                                <option value="" disabled selected>Vyberte variantu…</option>
+                                <optgroup label="FITNESS ČINKA 13 KG">
+                                    <option value="13kg-zluta">FITNESS ČINKA 13 KG (žlutá)</option>
+                                    <option value="13kg-ruzova">FITNESS ČINKA 13 KG (růžová)</option>
+                                </optgroup>
+                                <optgroup label="FITNESS ČINKA 21 KG">
+                                    <option value="21kg-stribrna">FITNESS ČINKA 21 KG (stříbrná)</option>
+                                    <option value="21kg-cerna">FITNESS ČINKA 21 KG (černá)</option>
+                                </optgroup>
+                                <optgroup label="FITNESS ČINKA 27 KG">
+                                    <option value="27kg-stribrna">FITNESS ČINKA 27 KG (stříbrná)</option>
+                                    <option value="27kg-cerna">FITNESS ČINKA 27 KG (černá)</option>
+                                </optgroup>
+                                <optgroup label="FITNESS ČINKA 32 KG">
+                                    <option value="32kg-stribrna">FITNESS ČINKA 32 KG (stříbrná)</option>
+                                    <option value="32kg-cerna">FITNESS ČINKA 32 KG (černá)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Řádek 3: Adresa -->
+                    <div class="form-group">
+                        <label class="form-label" for="adresa">Adresa (ulice a č.p.) <span class="required-star">*</span></label>
+                        <input class="form-input" type="text" id="adresa" name="adresa"
+                            placeholder="Příkladová 123" required autocomplete="street-address">
+                    </div>
+
+                    <!-- Řádek 4: Město | PSČ -->
+                    <div class="order-form__row order-form__row--city">
+                        <div class="form-group">
+                            <label class="form-label" for="mesto">Město <span class="required-star">*</span></label>
+                            <input class="form-input" type="text" id="mesto" name="mesto"
+                                placeholder="Praha" required autocomplete="address-level2">
+                        </div>
+                        <div class="form-group form-group--psc">
+                            <label class="form-label" for="psc">PSČ <span class="required-star">*</span></label>
+                            <input class="form-input" type="text" id="psc" name="psc"
+                                placeholder="110 00" required autocomplete="postal-code"
+                                maxlength="6" pattern="\d{3}\s?\d{2}">
+                        </div>
+                    </div>
+
+                    <!-- Řádek 5: Zpráva -->
+                    <div class="form-group">
+                        <label class="form-label" for="zprava">Zpráva / poznámka</label>
+                        <textarea class="form-input form-textarea" id="zprava" name="zprava"
+                            placeholder="Případné dotazy nebo poznámky k objednávce…" rows="5"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn--primary order-form__submit">
+                        Odeslat objednávku
+                    </button>
+
+                    <!-- GDPR text -->
+                    <p class="order-form__gdpr">
+                        Odesláním formuláře souhlasíte se zpracováním osobních údajů pro účely kontaktování vaší osoby
+                        za účelem vyřízení Vaší objednávky. Zde naleznete
+                        <a href="Prilohy/obchodni_podminky.pdf" target="_blank" rel="noopener">Obchodní podmínky</a>
+                        a údaje o
+                        <a href="Prilohy/gdpr.pdf" target="_blank" rel="noopener">ochraně osobních údajů</a>.
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontakt">
+        <div class="container footer__inner">
+            <div class="footer__col footer__col--brand">
+                <a href="index.html" class="footer__logo">
+                    <img src="Obrazky/svg/logo.svg" alt="Fitnessčinka Logo" width="150" height="auto">
+                </a>
+                <p class="footer__text">Speciální činky pro maximální výkon ve fitness i bodybuildingu.</p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Kontakt</h3>
+                <ul class="footer__contact-list">
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-phone"></i></span>
+                        <a href="tel:+420736640972">(+420) 736 640 972</a>
+                    </li>
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-envelope"></i></span>
+                        <a href="mailto:milan.grulich@carolcz.cz">milan.grulich@carolcz.cz</a>
+                    </li>
+                    <li>
+                        <span class="footer__icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <address class="footer__address">Záměl 59, 51743 Potštejn</address>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__title">Rychlé odkazy</h3>
+                <ul class="footer__links">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="index.html#fitnesscinka">Fitnessčinka</a></li>
+                    <li><a href="index.html#galerie">Galerie</a></li>
+                    <li><a href="index.html#varianty">Varianty</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© <span id="footerYear"></span> CAROLcz. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="btt" id="bttBtn" aria-label="Zpět nahoru">
+        <svg class="btt__ring" viewBox="0 0 52 52" aria-hidden="true">
+            <defs>
+                <linearGradient id="bttGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%"   stop-color="#e63946"/>
+                    <stop offset="50%"  stop-color="#ff9f43"/>
+                    <stop offset="100%" stop-color="#a29bfe"/>
+                </linearGradient>
+            </defs>
+            <circle class="btt__track" cx="26" cy="26" r="23"/>
+            <circle class="btt__progress" id="bttProgress" cx="26" cy="26" r="23"/>
+        </svg>
+        <i class="fa-solid fa-chevron-up btt__icon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
