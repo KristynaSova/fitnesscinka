@@ -641,13 +641,14 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Přesun šipek nad galerii pro menší obrazovky */
+    /* Přesun šipek pod galerii pro menší obrazovky */
     .gallery-container {
-        padding-top: 70px;
+        padding-bottom: 70px;
     }
 
     .slider-btn {
-        top: 0;
+        top: auto;
+        bottom: 0;
         transform: none;
     }
 
@@ -695,7 +696,7 @@ ul {
     aspect-ratio: 4/3;
     overflow: hidden;
     margin-bottom: 0;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -785,7 +786,20 @@ ul {
 }
 
 @media (max-width: 640px) {
+    .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .br--desktop {
+        display: none;
+    }
+
     .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
         grid-template-columns: 1fr;
     }
 
