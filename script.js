@@ -156,13 +156,46 @@ document.addEventListener('DOMContentLoaded', () => {
         if (select) select.value = variantaParam;
     }
 
-    // 9. Honeypot ochrana formuláře
+    // 9. Odeslání formuláře přes Formspree (AJAX) + honeypot ochrana
     const orderForm = document.getElementById('orderForm');
     if (orderForm) {
-        orderForm.addEventListener('submit', (e) => {
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Propis e-mailu zákazníka do _replyto
+            const emailField = orderForm.querySelector('input[name="email"]');
+            const replyTo = document.getElementById('replyToField');
+            if (emailField && replyTo) replyTo.value = emailField.value;
+
+            // Honeypot kontrola
             const hp = orderForm.querySelector('input[name="website"]');
-            if (hp && hp.value !== '') {
-                e.preventDefault();
+            if (hp && hp.value !== '') return;
+
+            const submitBtn = orderForm.querySelector('[type="submit"]');
+            const successMsg = document.getElementById('formSuccess');
+            const errorMsg = document.getElementById('formError');
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Odesílám…';
+
+            try {
+                const response = await fetch(orderForm.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(orderForm),
+                });
+
+                if (response.ok) {
+                    orderForm.hidden = true;
+                    successMsg.hidden = false;
+                    errorMsg.hidden = true;
+                } else {
+                    throw new Error('Chyba serveru');
+                }
+            } catch {
+                errorMsg.hidden = false;
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Odeslat objednávku';
             }
         });
     }

@@ -70,13 +70,15 @@
                 <h2 class="order-form__heading">Vyplňte objednávkový formulář</h2>
                 <p class="order-form__subtext">Všechna pole označená <span class="required-star">*</span> jsou povinná.</p>
 
-                <form class="order-form" id="orderForm" novalidate>
+                <form class="order-form" id="orderForm" action="https://formspree.io/f/xvzdvjnl" method="POST" novalidate>
+                    <input type="hidden" name="_subject" value="Nová objednávka – Fitnessčinka">
+                    <input type="hidden" name="_replyto" value="" id="replyToField">
 
                     <!-- Řádek 1: Jméno | E-mail -->
                     <div class="order-form__row">
                         <div class="form-group">
-                            <label class="form-label" for="fullName">Jméno a příjmení <span class="required-star">*</span></label>
-                            <input class="form-input" type="text" id="fullName" name="fullName"
+                            <label class="form-label" for="jmeno">Jméno a příjmení <span class="required-star">*</span></label>
+                            <input class="form-input" type="text" id="jmeno" name="jmeno"
                                 placeholder="Jan Novák" required autocomplete="name">
                         </div>
                         <div class="form-group">
@@ -89,8 +91,8 @@
                     <!-- Řádek 2: Telefon | Varianta -->
                     <div class="order-form__row">
                         <div class="form-group">
-                            <label class="form-label" for="phone">Telefon <span class="required-star">*</span></label>
-                            <input class="form-input" type="tel" id="phone" name="phone"
+                            <label class="form-label" for="telefon">Telefon <span class="required-star">*</span></label>
+                            <input class="form-input" type="tel" id="telefon" name="telefon"
                                 placeholder="+420 736 640 972" required autocomplete="tel">
                         </div>
                         <div class="form-group">
@@ -167,6 +169,16 @@
                     </p>
 
                 </form>
+
+                <div class="form-feedback form-feedback--success" id="formSuccess" hidden>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>Objednávka byla úspěšně odeslána! Brzy se vám ozveme.</p>
+                </div>
+                <div class="form-feedback form-feedback--error" id="formError" hidden>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.</p>
+                </div>
+
             </div>
 
         </div>

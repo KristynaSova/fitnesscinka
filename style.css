@@ -1210,6 +1210,38 @@ ul {
     gap: 10px;
 }
 
+.form-feedback[hidden] {
+    display: none;
+}
+
+.form-feedback {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-top: 24px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-feedback--success {
+    background: rgba(6, 214, 160, 0.1);
+    border: 1px solid rgba(6, 214, 160, 0.3);
+    color: #06d6a0;
+}
+
+.form-feedback--error {
+    background: rgba(224, 6, 17, 0.1);
+    border: 1px solid rgba(224, 6, 17, 0.3);
+    color: #ff6b6b;
+}
+
+.form-feedback i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
 .hp-field {
     position: absolute;
     left: -9999px;
