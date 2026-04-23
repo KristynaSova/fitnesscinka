@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Prilohy/
+
+Sitemap: https://fitnesscinka.cz/sitemap.xml

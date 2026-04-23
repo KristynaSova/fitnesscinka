@@ -154,6 +154,18 @@ ul {
     color: var(--text-btn);
 }
 
+.btn--secondary {
+    background-color: transparent;
+    color: var(--text-heading);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn--secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
 .btn--primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(224, 6, 17, 0.4);
