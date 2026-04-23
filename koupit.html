@@ -146,6 +146,12 @@
                             placeholder="Případné dotazy nebo poznámky k objednávce…" rows="5"></textarea>
                     </div>
 
+                    <!-- Honeypot ochrana proti botům -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="hp_website">Nevyplňujte toto pole</label>
+                        <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
                     <!-- Submit -->
                     <button type="submit" class="btn btn--primary order-form__submit">
                         Odeslat objednávku

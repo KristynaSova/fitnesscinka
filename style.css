@@ -1210,6 +1210,16 @@ ul {
     gap: 10px;
 }
 
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .order-form__gdpr {
     margin-top: 16px;
     font-size: 0.8rem;

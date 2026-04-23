@@ -155,4 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const select = document.getElementById('varianta');
         if (select) select.value = variantaParam;
     }
+
+    // 9. Honeypot ochrana formuláře
+    const orderForm = document.getElementById('orderForm');
+    if (orderForm) {
+        orderForm.addEventListener('submit', (e) => {
+            const hp = orderForm.querySelector('input[name="website"]');
+            if (hp && hp.value !== '') {
+                e.preventDefault();
+            }
+        });
+    }
 });
