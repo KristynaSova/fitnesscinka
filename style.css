@@ -1283,6 +1283,53 @@ ul {
     color: var(--primary);
 }
 
+/* Objednávka e-mailem */
+.order-mail-wrap {
+    text-align: center;
+}
+
+.order-mail-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 2rem 0 2.25rem;
+    text-align: left;
+}
+
+.order-mail-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.order-mail-step__num {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--accent-color, #e63946);
+    color: #fff;
+    font-weight: 700;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-mail-step p {
+    margin: 0;
+    padding-top: .25rem;
+    color: var(--text-primary, #ccc);
+    line-height: 1.6;
+}
+
+.order-mail-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1rem;
+}
+
 /* Responzivita formuláře */
 @media (max-width: 640px) {
     .order-form-wrap {

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objednávka | Fitnessčinka</title>
     <meta name="description" content="Objednejte si fitness činku Carol CZ. Vyberte variantu 13–32 kg a odešlete objednávku snadno online.">
-    <meta name="robots" content="noindex, nofollow"><!-- DOČASNÉ: odebrat po spuštění ostré domény -->
 
     <!-- Open Graph -->
     <meta property="og:title" content="Objednávka – Fitnessčinka">
@@ -73,123 +72,45 @@
         </div>
     </section>
 
-    <!-- Formulář -->
+    <!-- Objednávka e-mailem -->
     <main class="section bg-secondary">
         <div class="container order-container">
 
-            <div class="order-form-wrap">
-                <h2 class="order-form__heading">Vyplňte objednávkový formulář</h2>
-                <p class="order-form__subtext">Všechna pole označená <span class="required-star">*</span> jsou povinná.</p>
+            <div class="order-form-wrap order-mail-wrap">
+                <h2 class="order-form__heading">Jak objednat?</h2>
+                <p class="order-form__subtext">
+                    Objednávky vyřizujeme přímo e-mailem. Napište nám a my se vám ozveme s podrobnostmi.
+                </p>
 
-                <form class="order-form" id="orderForm" action="https://formspree.io/f/xvzdvjnl" method="POST" novalidate>
-                    <input type="hidden" name="_subject" value="Nová objednávka – Fitnessčinka">
-                    <input type="hidden" name="_replyto" value="" id="replyToField">
-
-                    <!-- Řádek 1: Jméno | E-mail -->
-                    <div class="order-form__row">
-                        <div class="form-group">
-                            <label class="form-label" for="jmeno">Jméno a příjmení <span class="required-star">*</span></label>
-                            <input class="form-input" type="text" id="jmeno" name="jmeno"
-                                placeholder="Jan Novák" required autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="email">E-mail <span class="required-star">*</span></label>
-                            <input class="form-input" type="email" id="email" name="email"
-                                placeholder="jan@example.cz" required autocomplete="email">
-                        </div>
+                <div class="order-mail-steps">
+                    <div class="order-mail-step">
+                        <span class="order-mail-step__num">1</span>
+                        <p>Vyberte variantu činky (13 / 21 / 27 / 32 kg) a barvu.</p>
                     </div>
-
-                    <!-- Řádek 2: Telefon | Varianta -->
-                    <div class="order-form__row">
-                        <div class="form-group">
-                            <label class="form-label" for="telefon">Telefon <span class="required-star">*</span></label>
-                            <input class="form-input" type="tel" id="telefon" name="telefon"
-                                placeholder="+420 736 640 972" required autocomplete="tel">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="varianta">Varianta produktu <span class="required-star">*</span></label>
-                            <select class="form-input form-select" id="varianta" name="varianta" required>
-                                <option value="" disabled selected>Vyberte variantu…</option>
-                                <optgroup label="FITNESS ČINKA 13 KG">
-                                    <option value="13kg-zluta">FITNESS ČINKA 13 KG (žlutá)</option>
-                                    <option value="13kg-ruzova">FITNESS ČINKA 13 KG (růžová)</option>
-                                </optgroup>
-                                <optgroup label="FITNESS ČINKA 21 KG">
-                                    <option value="21kg-stribrna">FITNESS ČINKA 21 KG (stříbrná)</option>
-                                    <option value="21kg-cerna">FITNESS ČINKA 21 KG (černá)</option>
-                                </optgroup>
-                                <optgroup label="FITNESS ČINKA 27 KG">
-                                    <option value="27kg-stribrna">FITNESS ČINKA 27 KG (stříbrná)</option>
-                                    <option value="27kg-cerna">FITNESS ČINKA 27 KG (černá)</option>
-                                </optgroup>
-                                <optgroup label="FITNESS ČINKA 32 KG">
-                                    <option value="32kg-stribrna">FITNESS ČINKA 32 KG (stříbrná)</option>
-                                    <option value="32kg-cerna">FITNESS ČINKA 32 KG (černá)</option>
-                                </optgroup>
-                            </select>
-                        </div>
+                    <div class="order-mail-step">
+                        <span class="order-mail-step__num">2</span>
+                        <p>Napište nám e-mail se zvolenou variantou, vaším jménem, telefonem a doručovací adresou.</p>
                     </div>
-
-                    <!-- Řádek 3: Adresa -->
-                    <div class="form-group">
-                        <label class="form-label" for="adresa">Adresa (ulice a č.p.) <span class="required-star">*</span></label>
-                        <input class="form-input" type="text" id="adresa" name="adresa"
-                            placeholder="Příkladová 123" required autocomplete="street-address">
+                    <div class="order-mail-step">
+                        <span class="order-mail-step__num">3</span>
+                        <p>Ozveme se vám zpět s potvrzením objednávky a platebními údaji.</p>
                     </div>
-
-                    <!-- Řádek 4: Město | PSČ -->
-                    <div class="order-form__row order-form__row--city">
-                        <div class="form-group">
-                            <label class="form-label" for="mesto">Město <span class="required-star">*</span></label>
-                            <input class="form-input" type="text" id="mesto" name="mesto"
-                                placeholder="Praha" required autocomplete="address-level2">
-                        </div>
-                        <div class="form-group form-group--psc">
-                            <label class="form-label" for="psc">PSČ <span class="required-star">*</span></label>
-                            <input class="form-input" type="text" id="psc" name="psc"
-                                placeholder="110 00" required autocomplete="postal-code"
-                                maxlength="6" pattern="\d{3}\s?\d{2}">
-                        </div>
-                    </div>
-
-                    <!-- Řádek 5: Zpráva -->
-                    <div class="form-group">
-                        <label class="form-label" for="zprava">Zpráva / poznámka</label>
-                        <textarea class="form-input form-textarea" id="zprava" name="zprava"
-                            placeholder="Případné dotazy nebo poznámky k objednávce…" rows="5"></textarea>
-                    </div>
-
-                    <!-- Honeypot ochrana proti botům -->
-                    <div class="hp-field" aria-hidden="true">
-                        <label for="hp_website">Nevyplňujte toto pole</label>
-                        <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <!-- Submit -->
-                    <button type="submit" class="btn btn--primary order-form__submit">
-                        Odeslat objednávku
-                    </button>
-
-                    <!-- GDPR text -->
-                    <p class="order-form__gdpr">
-                        Odesláním formuláře souhlasíte se zpracováním osobních údajů pro účely kontaktování vaší osoby
-                        za účelem vyřízení Vaší objednávky. Zde naleznete
-                        <a href="Prilohy/obchodni_podminky.pdf" target="_blank" rel="noopener">Obchodní podmínky</a>
-                        a údaje o
-                        <a href="Prilohy/gdpr.pdf" target="_blank" rel="noopener">ochraně osobních údajů</a>.
-                    </p>
-
-                </form>
-
-                <div class="form-feedback form-feedback--success" id="formSuccess" hidden>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <p>Objednávka byla úspěšně odeslána! Brzy se vám ozveme.</p>
-                </div>
-                <div class="form-feedback form-feedback--error" id="formError" hidden>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <p>Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.</p>
                 </div>
 
+                <a class="btn btn--primary order-mail-btn"
+                   href="mailto:milan.grulich@carolcz.cz?subject=Objednávka%20–%20Fitnessčinka">
+                    <i class="fa-solid fa-envelope"></i>
+                    milan.grulich@carolcz.cz
+                </a>
+
+                <p class="order-form__gdpr" style="margin-top:1.5rem;">
+                    Nebo nás kontaktujte telefonicky na
+                    <a href="tel:+420736640972">(+420) 736 640 972</a>.
+                    Zde naleznete
+                    <a href="Prilohy/obchodni_podminky.pdf" target="_blank" rel="noopener">Obchodní podmínky</a>
+                    a údaje o
+                    <a href="Prilohy/gdpr.pdf" target="_blank" rel="noopener">ochraně osobních údajů</a>.
+                </p>
             </div>
 
         </div>
